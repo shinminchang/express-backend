@@ -9,7 +9,7 @@ var cors = require('cors');
 mongoose.Promise = require('bluebird');
 mongoose.connect('mongodb://localhost:27017/aufinancex')
     .then(() => { // if all is ok we will be here
-      console.log('Start');
+        console.log('Start');
     })
     .catch(err => { // if error we will be here
         console.error('App starting error:', err.stack);
@@ -27,6 +27,6 @@ app.use(bodyParser.json());
 app.use('/items', itemRouter);
 
 // Start the server
-app.listen(port, function(){
-  console.log('Server is running on Port: ',port);
+app.listen(port, function () {
+    console.log('Server is running on Port: ', port);
 });
